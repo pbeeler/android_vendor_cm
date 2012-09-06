@@ -101,6 +101,15 @@ PRODUCT_COPY_FILES += \
 # jackpal
 $(call inherit-product, vendor/jackpal/jackpal-vendor.mk)
 
+# ChainFire's SuperSU
+PRODUCT_COPY_FILES +=  \
+    system/su/Superuser.apk:system/app/Superuser.apk
+
+PRODUCT_PACKAGES += \
+Superuser \
+    Superuser.apk \
+    su
+
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/cm/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
@@ -126,9 +135,7 @@ PRODUCT_PACKAGES += \
     Camera \
     Development \
     LatinIME \
-    SpareParts \
-    Superuser \
-    su
+    SpareParts
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
